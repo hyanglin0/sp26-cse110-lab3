@@ -1,3 +1,3 @@
 # Lab 2 - Starter
 
-https://github.com/hyanglin0/CSE110Lab2
+https://hyanglin0.github.io/CSE110Lab2/
