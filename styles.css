@@ -9,6 +9,10 @@
     --tertiary-text-color: color(display-p3 0.56 0.96 0.96); /* Team logo "Team 10" color */
 }
 
+* {
+    max-width: 100%;
+}
+
 body {
     margin: 0 0;
 }
@@ -91,7 +95,7 @@ label[for="college"] {
     font-size: 13.5pt;
 }
 
-label[for="today"] {
+[for="today"] {
     font-size: 13.5pt;
 }
 
@@ -150,7 +154,7 @@ select {
     font-size: 1pc;
 }
 
-textarea {
+form textarea {
     font-family: 'Lilita One', serif;
     font-weight: 200;
     font-size: 18px;
@@ -178,16 +182,26 @@ button:active {
 
 hr {
     border-color: var(--tertiary-background-color, skyblue);
+    border-width: 2px;
 }
 
-video {
+section ~ hr {
+    border-width: 1px;
+}
+
+video:has(+ audio) {
+    display: block;
     border-radius: 10px;
     max-width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 
-audio {
+video + audio {
+    display: block;
     max-width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
 }
 
 img {
@@ -201,7 +215,7 @@ footer {
     font-weight: 400;
 }
 
-.decision {
+div.decision {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
@@ -227,8 +241,10 @@ footer {
     right: 15px;
 }
 
-#check-in-section:hover + #form-button > img {
-    display: none;
+#check-in-section {
+    &:hover + #form-button > img {
+        display: none;
+    }
 }
 
 #form-button > img {
