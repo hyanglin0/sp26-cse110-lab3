@@ -4,10 +4,16 @@
     <title>Team 10 Meeting Minutes</title>
     <meta name="author" content="Han Yang-Lin">
     <link rel="icon" type="image/png" href="https://avatars.slack-edge.com/2026-04-10/10890567022610_cb36e353c2a1b6b0b31e_132.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        background-color: var(--primary-background-color, darkblue);
+      }
+  </style>
   </head>
   <body>
     <header>
-      <nav>
+      <nav style="background-color: var(--secondary-background-color, midnightblue);">
         <h3><a href="#info-section">Meeting Info</a> / <a href="#attendance-section">Attendance</a> / <a href="#agenda-section">Agenda</a> / <a href="#additional-section">Additional Meeting Notes</a> / <a href="#unfinished-section">Unfinished Business</a> / <a href="#new-section">New Business</a> / <a href="#decisions-section">Decisions Made</a> / <a href="#deferred-section">Deferred Items</a> / <a href="#actions-section">Action Items</a> / <a href="#media-section">Media</a> / <a href="#check-in-section">Check-In Form</a></h3>
       </nav>
       <h1>Team 10 Meeting Minutes</h1>
@@ -31,7 +37,7 @@
       <section>
         <div id="attendance-section">
           <h2>Attendance</h2>
-          <form>
+          <form id="participants">
             <input type="checkbox" id="nsutedja" name="nsutedja" value="nsutedja" checked>
             <label for="nsutedja">Nicole Sutedja (<a href="mailto:nsutedja@ucsd.edu">nsutedja@ucsd.edu</a>)</label><br>
             <input type="checkbox" id="emarriott" name="emarriott" value="emarriott" checked>
@@ -53,8 +59,8 @@
             <input type="checkbox" id="hyanglin" name="hyanglin" value="hyanglin" checked>
             <label for="hyanglin">Han Yang-Lin (<a href="mailto:hyanglin@ucsd.edu">hyanglin@ucsd.edu</a>)</label><br>
             <input type="checkbox" id="prs016" name="prs016" value="prs016" checked>
-            <label for="prs016">Prakhar Shah (<a href="mailto:prs016@ucsd.edu">prs016@ucsd.edu</a>)</label><br><br>
-          </form>
+            <label for="prs016">Prakhar Shah (<a href="mailto:prs016@ucsd.edu">prs016@ucsd.edu</a>)</label><br>
+          </form><br>
         </div>
       </section>
       <hr>
@@ -91,7 +97,7 @@
         <div id="new-section">
           <h2>New Business</h2>
           <details>
-            <summary><b>Item 1: Introductions</b></summary>
+            <summary>Item 1: Introductions</summary>
             <ul>
               <li><b>Introduced by:</b> Evan Marriott</li>
               <li><b>Discussion:</b> Each member introduced themselves, shared personal interests, and described their coding background and strengths. Members highlighted experience across frontend, backend, QA, DevOps, design, data, and documentation.</li>
@@ -100,7 +106,7 @@
           </details>
           <br>
           <details>
-            <summary><b>Item 2: Role Assignments</b></summary>
+            <summary>Item 2: Role Assignments</summary>
             <ul>
               <li><b>Introduced by:</b> Evan Marriott</li>
               <li><b>Discussion:</b> Based on introductions and stated strengths, the team discussed and <strong>confirmed role assignments</strong>. <span>Roles are treated as <em>primary ownership</em> areas rather than hard boundaries.</span></li>
@@ -109,7 +115,7 @@
           </details>
           <br>
           <details>
-            <summary><b>Item 3: Recurring Meeting Time</b></summary>
+            <summary>Item 3: Recurring Meeting Time</summary>
             <ul>
               <li><b>Introduced by:</b> Nicole Sutedja</li>
               <li><b>Discussion:</b> Team reviewed availability and agreed on a standing weekly meeting time during the <strong>Monday discussion</strong> period.</li>
@@ -137,7 +143,7 @@
             <li><b>Dissenting Opinions:</b> None</li>
             <li><b>Why the group proceeded anyway:</b> N/A</li>
           </ul>
-          <h3>Slack as Primary Communication Channel</h3>
+          <h3>Decision 3: Slack as Primary Communication Channel</h3>
           <ul>
             <li><b>Decision:</b> Slack will be used for all async team communication; responses expected within <em>24 hours</em> on weekdays</li>
             <li><b>Reasoning:</b> Centralizes communication and integrates well with <strong>GitHub notifications</strong></li>
@@ -239,8 +245,10 @@
               <input type="radio" id="no" name="attend" value="no">
               <label for="no">No</label><br>
             </fieldset><br>
-            <label for="feedback">How did the meeting go?</label><br><br>
-            <textarea id="feedback" name="feedback"></textarea><br><br>
+            <fieldset>
+              <legend>How did the meeting go?</legend>
+              <textarea id="feedback" name="feedback"></textarea>
+            </fieldset><br>
             <label for="today">Today's Date:</label>
             <input type="date" id="today" name="today"><br><br>
             <button type="submit">Submit</button>
