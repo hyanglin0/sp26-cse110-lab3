@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
+/* Declare global variables for colors */
 :root {
     --primary-background-color: rgb(0, 10, 40); /* Team logo darker background color */
     --secondary-background-color: hsl(212, 97%, 15%); /* Team logo lighter background color */
@@ -21,6 +22,7 @@ header {
     margin: 0 15px 0 15px;
 }
 
+/* Navigation bar at the top of the page */
 nav {
     padding-left: 15px;
     padding-right: 15px;
@@ -32,42 +34,51 @@ nav {
     top: 0;
     border-style: solid;
     border-width: 0 0 1mm 0;
-    border-color: var(--tertiary-background-color);
-    z-index: 1;
+    border-color: var(--tertiary-background-color, skyblue);
+    z-index: 1; /* So the navigation bar doesn't get covered by other elements when scrolling */
 }
 
+/* Main container for the meeting notes */
 main {
     margin-left: 15px;
     margin-right: 15px;
 }
 
+/* Footer at the bottom of the page */
 footer {
     margin-left: 15px;
     margin-right: 15px;
+    font-family: 'Lilita One', serif;
+    font-weight: 400;
 }
 
+/* The main title of the page */
 h1 {
     color: var(--primary-text-color, orange);
     font-family: 'Lilita One', serif;
     font-weight: 400;
 }
 
+/* The section titles */
 h2 {
     color: var(--primary-text-color, orange);
     font-family: 'Lilita One', serif;
     font-weight: 400;
 }
 
+/* The subtitle for the meeting topic and date */
 header > h2 {
     color: var(--secondary-text-color, white);
 }
 
+/* Major bullet points in each section */
 h3 {
     color: var(--secondary-text-color, white);
     font-family: 'Lilita One', serif;
     font-weight: 400;
 }
 
+/* The linked text for each section in the navigation bar */
 nav > h3 {
     margin: auto;
 }
@@ -83,6 +94,7 @@ li {
     font-size: 18px;
 }
 
+/* Used for the attendees' names and labels in the check-in form */
 label {
     color: var(--secondary-text-color, white);
 }
@@ -99,6 +111,7 @@ label[for="college"] {
     font-size: 13.5pt;
 }
 
+/* Major bullet points in the expandable section */
 summary {
     color: var(--secondary-text-color, white);
     font-family: 'Lilita One', serif;
@@ -106,6 +119,7 @@ summary {
     font-size: 18px;
 }
 
+/* The prompt for each question in the check-in form */
 legend {
     color: var(--secondary-text-color, white);
     font-size: 18px;
@@ -126,34 +140,35 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Bolded start of each bullet point */
 b {
     color: var(--tertiary-text-color, lightblue);
     font-family: 'Lilita One', serif;
     font-weight: 200;
 }
 
-summary > b {
-    color: var(--secondary-text-color, white);
-}
-
+/* The container for each question in the check-in form */
 fieldset {
     background-color: var(--secondary-background-color, midnightblue);
     border-radius: 10px;
     padding: 10px 12px 12px 12px;
 }
 
+/* Interactable elements including the checkboxes for attendance and the check-in form */
 input {
     font-family: 'Lilita One', serif;
     font-weight: 200;
     font-size: 1pc;
 }
 
+/* Selection box for the college */
 select {
     font-family: 'Lilita One', serif;
     font-weight: 200;
     font-size: 1pc;
 }
 
+/* Textbox to give feedback for the meeting */
 form textarea {
     font-family: 'Lilita One', serif;
     font-weight: 200;
@@ -162,6 +177,7 @@ form textarea {
     height: stretch;
 }
 
+/* Form submission button */
 button {
     background-color: var(--secondary-background-color, midnightblue);
     color: var(--primary-text-color, orange);
@@ -176,6 +192,7 @@ button {
     margin: 0 auto;
 }
 
+/* Change submission button color when click is held down */
 button:active {
     color: var(--secondary-text-color, white);
 }
@@ -189,6 +206,7 @@ section ~ hr {
     border-width: 1px;
 }
 
+/* Meeting video */
 video:has(+ audio) {
     display: block;
     border-radius: 10px;
@@ -197,6 +215,7 @@ video:has(+ audio) {
     margin-bottom: 20px;
 }
 
+/* Meeting audio */
 video + audio {
     display: block;
     max-width: 100%;
@@ -204,49 +223,45 @@ video + audio {
     margin-bottom: 20px;
 }
 
+/* Team logo */
 img {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
 }
 
-footer {
-    font-family: 'Lilita One', serif;
-    font-weight: 400;
-}
-
+/* The container for each decision made */
 div.decision {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
 }
 
+/* The title for each decision */
 .decision > h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
+/* The container for each item in the action items grid */
 .action-item {
     justify-self: stretch;
 }
 
+/* The title for each action item */
 .action-item > h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
+/* Button to jump to the check-in form */
 #form-button {
     position: fixed;
     bottom: 15px;
     right: 15px;
 }
 
-#check-in-section {
-    &:hover + #form-button > img {
-        display: none;
-    }
-}
-
+/* The image for the button jumping to the check-in form */
 #form-button > img {
     width: 5vw;
     height: 5vw;
@@ -259,14 +274,16 @@ div.decision {
     border-width: 1px;
 }
 
-#decisions :first-child {
-    margin-left: 0;
+/* The check-in form */
+#check-in-section {
+    font-family: 'Lilita One', serif;
+    font-weight: 200;
+    &:hover + #form-button > img {
+        display: none; /* Hide button for jumping to the check-in form when already hovering over the check-in form */
+    }
 }
 
-#decisions :last-child {
-    margin-right: 0;
-}
-
+/* Container for members who attended the meeting */
 #participants {
     background-color: var(--secondary-background-color, midnightblue);
     font-family: 'Lilita One', serif;
@@ -276,6 +293,7 @@ div.decision {
     border-radius: 10px;
 }
 
+/* Container for decisions made */
 #decisions {
     display: flex;
     flex-direction: row;
@@ -283,22 +301,20 @@ div.decision {
     justify-content: flex-start;
 }
 
+/* Container for action items */
 #action-items {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Structure into a 2x2 grid */
     row-gap: 5px;
     column-gap: 20px;
 }
 
-#check-in-section {
-    font-family: 'Lilita One', serif;
-    font-weight: 200;
-}
-
+/* The container for the feedback textbox */
 #feedback-fieldset {
     height: 8em;
 }
 
+/* Turn 2x2 grid into rows for mobile users */
 @media screen and (max-width:480px) {
     #action-items {
         display: block;
