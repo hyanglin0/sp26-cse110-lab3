@@ -9,6 +9,39 @@
     --tertiary-text-color: color(display-p3 0.56 0.96 0.96); /* Team logo "Team 10" color */
 }
 
+body {
+    margin: 0 0;
+}
+
+header {
+    margin: 0 15px 0 15px;
+}
+
+nav {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 1.5;
+    position: sticky;
+    top: 0;
+    border-style: solid;
+    border-width: 0 0 1mm 0;
+    border-color: var(--tertiary-background-color);
+    z-index: 1;
+}
+
+main {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+footer {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 h1 {
     color: var(--primary-text-color, orange);
     font-family: 'Lilita One', serif;
@@ -31,36 +64,62 @@ h3 {
     font-weight: 400;
 }
 
+nav > h3 {
+    margin: auto;
+}
+
 ul, ol {
     background-color: var(--secondary-background-color, midnightblue);
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
 }
 
 li {
     color: var(--secondary-text-color, white);
+    font-size: 18px;
 }
 
 label {
     color: var(--secondary-text-color, white);
 }
 
+label[for="name"] {
+    font-size: 13.5pt;
+}
+
+label[for="college"] {
+    font-size: 13.5pt;
+}
+
+label[for="today"] {
+    font-size: 13.5pt;
+}
+
 summary {
     color: var(--secondary-text-color, white);
     font-family: 'Lilita One', serif;
     font-weight: 400;
-    font-size: large;
+    font-size: 18px;
 }
 
 legend {
     color: var(--secondary-text-color, white);
+    font-size: 18px;
 }
 
 p {
     color: var(--secondary-text-color, white);
+    font-size: 18px;
 }
 
 a {
     color: var(--tertiary-text-color, lightblue);
     text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-text-color, white);
+    text-decoration: underline;
 }
 
 b {
@@ -75,21 +134,28 @@ summary > b {
 
 fieldset {
     background-color: var(--secondary-background-color, midnightblue);
+    border-radius: 10px;
+    padding: 10px 12px 12px 12px;
 }
 
 input {
     font-family: 'Lilita One', serif;
     font-weight: 200;
+    font-size: 1pc;
 }
 
 select {
     font-family: 'Lilita One', serif;
     font-weight: 200;
+    font-size: 1pc;
 }
 
 textarea {
     font-family: 'Lilita One', serif;
     font-weight: 200;
+    font-size: 18px;
+    width: stretch;
+    height: stretch;
 }
 
 button {
@@ -97,10 +163,37 @@ button {
     color: var(--primary-text-color, orange);
     font-family: 'Lilita One', serif;
     font-weight: 400;
+    font-size: 20px;
+    width: 240px;
+    height: 40px;
+    max-width: 50%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+button:active {
+    color: var(--secondary-text-color, white);
 }
 
 hr {
     border-color: var(--tertiary-background-color, skyblue);
+}
+
+video {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+audio {
+    max-width: 100%;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -108,13 +201,90 @@ footer {
     font-weight: 400;
 }
 
+.decision {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+}
+
+.decision > h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.action-item {
+    justify-self: stretch;
+}
+
+.action-item > h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#form-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+#check-in-section:hover + #form-button > img {
+    display: none;
+}
+
+#form-button > img {
+    width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 100px;
+    max-height: 100px;
+    border-style: solid;
+    border-color: var(--tertiary-text-color, cyan);
+    border-width: 1px;
+}
+
+#decisions :first-child {
+    margin-left: 0;
+}
+
+#decisions :last-child {
+    margin-right: 0;
+}
+
 #participants {
     background-color: var(--secondary-background-color, midnightblue);
     font-family: 'Lilita One', serif;
     font-weight: 200;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#decisions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#action-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 20px;
 }
 
 #check-in-section {
     font-family: 'Lilita One', serif;
     font-weight: 200;
+}
+
+#feedback-fieldset {
+    height: 8em;
+}
+
+@media screen and (max-width:480px) {
+    #action-items {
+        display: block;
+    }
 }

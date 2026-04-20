@@ -12,10 +12,10 @@
   </style>
   </head>
   <body>
+    <nav style="background-color: var(--secondary-background-color, midnightblue);">
+      <h3><a href="#info-section">Meeting Info</a> / <a href="#attendance-section">Attendance</a> / <a href="#agenda-section">Agenda</a> / <a href="#additional-section">Additional Meeting Notes</a> / <a href="#unfinished-section">Unfinished Business</a> / <a href="#new-section">New Business</a> / <a href="#decisions-section">Decisions Made</a> / <a href="#deferred-section">Deferred Items</a> / <a href="#actions-section">Action Items</a> / <a href="#media-section">Media</a> / <a href="#check-in-section">Check-In Form</a></h3>
+    </nav>
     <header>
-      <nav style="background-color: var(--secondary-background-color, midnightblue);">
-        <h3><a href="#info-section">Meeting Info</a> / <a href="#attendance-section">Attendance</a> / <a href="#agenda-section">Agenda</a> / <a href="#additional-section">Additional Meeting Notes</a> / <a href="#unfinished-section">Unfinished Business</a> / <a href="#new-section">New Business</a> / <a href="#decisions-section">Decisions Made</a> / <a href="#deferred-section">Deferred Items</a> / <a href="#actions-section">Action Items</a> / <a href="#media-section">Media</a> / <a href="#check-in-section">Check-In Form</a></h3>
-      </nav>
       <h1>Team 10 Meeting Minutes</h1>
       <h2>Kickoff Meeting (April 9, 2026)</h2>
       <hr>
@@ -129,27 +129,35 @@
       <section>
         <div id="decisions-section">
           <h2>Decisions Made</h2>
-          <h3>Decision 1: Role Assignments</h3>
-          <ul>
-            <li><b>Decision:</b> Roles assigned as follows — Team Leads: Evan Marriott, Nicole Sutedja; Frontend: Prakhar Shah, Kaley Chung, Benedict Luis, Bethany Miyamoto; Backend: Aron Wu, Jensen Guo, Xuanye Wang, Han Yang-Lin; Data: Hudson Gehrke</li>
-            <li><b>Reasoning:</b> Assignments based on each member's stated <strong>strengths and interests</strong> from introductions</li>
-            <li><b>Dissenting Opinions:</b> None</li>
-            <li><b>Why the group proceeded anyway:</b> N/A</li>
-          </ul>
-          <h3>Decision 2: Recurring Meeting Time</h3>
-          <ul>
-            <li><b>Decision:</b> Mondays 4:00 – 5:00 PM during discussion period</li>
-            <li><b>Reasoning:</b> Consistent with everyone's existing schedule and a dedicated block already reserved for the course</li>
-            <li><b>Dissenting Opinions:</b> None</li>
-            <li><b>Why the group proceeded anyway:</b> N/A</li>
-          </ul>
-          <h3>Decision 3: Slack as Primary Communication Channel</h3>
-          <ul>
-            <li><b>Decision:</b> Slack will be used for all async team communication; responses expected within <em>24 hours</em> on weekdays</li>
-            <li><b>Reasoning:</b> Centralizes communication and integrates well with <strong>GitHub notifications</strong></li>
-            <li><b>Dissenting Opinions:</b> None</li>
-            <li><b>Why the group proceeded anyway:</b> N/A</li>
-          </ul>
+          <div id="decisions">
+            <div class="decision">
+              <h3>Decision 1: Role Assignments</h3>
+              <ul>
+                <li><b>Decision:</b> Roles assigned as follows — Team Leads: Evan Marriott, Nicole Sutedja; Frontend: Prakhar Shah, Kaley Chung, Benedict Luis, Bethany Miyamoto; Backend: Aron Wu, Jensen Guo, Xuanye Wang, Han Yang-Lin; Data: Hudson Gehrke</li>
+                <li><b>Reasoning:</b> Assignments based on each member's stated <strong>strengths and interests</strong> from introductions</li>
+                <li><b>Dissenting Opinions:</b> None</li>
+                <li><b>Why the group proceeded anyway:</b> N/A</li>
+              </ul>
+            </div>
+            <div class="decision">
+              <h3>Decision 2: Recurring Meeting Time</h3>
+              <ul>
+                <li><b>Decision:</b> Mondays 4:00 – 5:00 PM during discussion period</li>
+                <li><b>Reasoning:</b> Consistent with everyone's existing schedule and a dedicated block already reserved for the course</li>
+                <li><b>Dissenting Opinions:</b> None</li>
+                <li><b>Why the group proceeded anyway:</b> N/A</li>
+              </ul>
+            </div>
+            <div class="decision">
+              <h3>Decision 3: Slack as Primary Communication Channel</h3>
+              <ul>
+                <li><b>Decision:</b> Slack will be used for all async team communication; responses expected within <em>24 hours</em> on weekdays</li>
+                <li><b>Reasoning:</b> Centralizes communication and integrates well with <strong>GitHub notifications</strong></li>
+                <li><b>Dissenting Opinions:</b> None</li>
+                <li><b>Why the group proceeded anyway:</b> N/A</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <hr>
@@ -166,30 +174,40 @@
       <section>
         <div id="actions-section">
           <h2>Action Items</h2>
-          <h3>Task 1: Draft and circulate team charter for signatures</h3>
-          <ul>
-            <li><b>Assigned To:</b> Evan Marriott, Nicole Sutedja</li>
-            <li><b>Due Date:</b> TBD</li>
-            <li><b>Status:</b> In Progress</li>
-          </ul>
-          <h3>Task 2: Set up GitHub repo, project board, and branch protection rules</h3>
-          <ul>
-            <li><b>Assigned To:</b> Kaley Chung</li>
-            <li><b>Due Date:</b> TBD</li>
-            <li><b>Status:</b> Not Started</li>
-          </ul>
-          <h3>Task 3: Edit and publish team introduction video</h3>
-          <ul>
-            <li><b>Assigned To:</b> All Members</li>
-            <li><b>Due Date:</b> TBD</li>
-            <li><b>Status:</b> In Progress</li>
-          </ul>
-          <h3>Task 4: Join team Slack and confirm access to GitHub org</h3>
-          <ul>
-            <li><b>Assigned To:</b> All Members</li>
-            <li><b>Due Date:</b> TBD</li>
-            <li><b>Status:</b> Not Started</li>
-          </ul>
+          <div id="action-items">
+            <div class="action-item">
+              <h3>Task 1: Draft and circulate team charter for signatures</h3>
+              <ul>
+                <li><b>Assigned To:</b> Evan Marriott, Nicole Sutedja</li>
+                <li><b>Due Date:</b> TBD</li>
+                <li><b>Status:</b> In Progress</li>
+              </ul>
+            </div>
+            <div class="action-item">
+              <h3>Task 2: Set up GitHub repo, project board, and branch protection rules</h3>
+              <ul>
+                <li><b>Assigned To:</b> Kaley Chung</li>
+                <li><b>Due Date:</b> TBD</li>
+                <li><b>Status:</b> Not Started</li>
+              </ul>
+            </div>
+            <div class="action-item">
+              <h3>Task 3: Edit and publish team introduction video</h3>
+              <ul>
+                <li><b>Assigned To:</b> All Members</li>
+                <li><b>Due Date:</b> TBD</li>
+                <li><b>Status:</b> In Progress</li>
+              </ul>
+            </div>
+            <div class="action-item">
+              <h3>Task 4: Join team Slack and confirm access to GitHub org</h3>
+              <ul>
+                <li><b>Assigned To:</b> All Members</li>
+                <li><b>Due Date:</b> TBD</li>
+                <li><b>Status:</b> Not Started</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <hr>
@@ -212,49 +230,55 @@
         <div id="check-in-section">
           <h2>Check-In Form</h2>
           <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" list="names"><br><br>
-            <datalist id="names">
-              <option value="Nicole Sutedja"></option>
-              <option value="Evan Marriott"></option>
-              <option value="Hudson Gehrke"></option>
-              <option value="Aron Wu"></option>
-              <option value="Bethany Miyamoto"></option>
-              <option value="Jensen Guo"></option>
-              <option value="Kaley Chung"></option>
-              <option value="Xuanye Wang"></option>
-              <option value="Benedict Luis"></option>
-              <option value="Han Yang-Lin"></option>
-              <option value="Prakhar Shah"></option>
-            </datalist>
-            <label for="college">College:</label>
-            <select id="college" name="college">
-              <option value="Revelle">Revelle</option>
-              <option value="Muir">Muir</option>
-              <option value="Marshall">Marshall</option>
-              <option value="Warren">Warren</option>
-              <option value="ERC">ERC</option>
-              <option value="Sixth">Sixth</option>
-              <option value="Seventh">Seventh</option>
-              <option value="Eighth">Eighth</option>
-            </select><br><br>
-            <fieldset>
-              <legend>Did you attend the meeting?</legend>
-              <input type="radio" id="yes" name="attend" value="yes">
-              <label for="yes">Yes</label><br>
-              <input type="radio" id="no" name="attend" value="no">
-              <label for="no">No</label><br>
-            </fieldset><br>
-            <fieldset>
-              <legend>How did the meeting go?</legend>
-              <textarea id="feedback" name="feedback"></textarea>
-            </fieldset><br>
+            <div id="questions">
+              <fieldset id="basic-fieldset">
+                <legend>Basic Info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" list="names"><br><br>
+                <datalist id="names">
+                  <option value="Nicole Sutedja"></option>
+                  <option value="Evan Marriott"></option>
+                  <option value="Hudson Gehrke"></option>
+                  <option value="Aron Wu"></option>
+                  <option value="Bethany Miyamoto"></option>
+                  <option value="Jensen Guo"></option>
+                  <option value="Kaley Chung"></option>
+                  <option value="Xuanye Wang"></option>
+                  <option value="Benedict Luis"></option>
+                  <option value="Han Yang-Lin"></option>
+                  <option value="Prakhar Shah"></option>
+                </datalist>
+                <label for="college">College:</label>
+                <select id="college" name="college">
+                  <option value="Revelle">Revelle</option>
+                  <option value="Muir">Muir</option>
+                  <option value="Marshall">Marshall</option>
+                  <option value="Warren">Warren</option>
+                  <option value="ERC">ERC</option>
+                  <option value="Sixth">Sixth</option>
+                  <option value="Seventh">Seventh</option>
+                  <option value="Eighth">Eighth</option>
+                </select>
+              </fieldset><br>
+              <fieldset id="attend-fieldset">
+                <legend>Did you attend the meeting?</legend>
+                <input type="radio" id="yes" name="attend" value="yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="no" name="attend" value="no">
+                <label for="no">No</label><br>
+              </fieldset><br>
+              <fieldset id="feedback-fieldset">
+                <legend>How did the meeting go?</legend>
+                <textarea id="feedback" name="feedback"></textarea>
+              </fieldset>
+            </div><br>
             <label for="today">Today's Date:</label>
             <input type="date" id="today" name="today"><br><br>
             <button type="submit">Submit</button>
           </form>
           <br>
         </div>
+        <a id="form-button" href="#check-in-section"><img src="https://avatars.slack-edge.com/2026-04-10/10890567022610_cb36e353c2a1b6b0b31e_132.png"></a>
       </section>
       <hr>
     </main>
